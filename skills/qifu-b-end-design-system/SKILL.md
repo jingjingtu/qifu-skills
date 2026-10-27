@@ -149,4 +149,4 @@ List、Detail、Drawer Form 路由到现有 Skill。其他 Archetype 当前状�
 
 ## Figma 真实变量调用
 
-视觉 Token 的权威数据源为 `../qifu-shared/theme/tokens.json` 与 `../qifu-shared/theme/source/*.json`。调用时必须使用记录中的 `figmaPath` / `name`；根据 `基础` collection 的 `毓数/Light`、`智能运营/Light` 与 `色彩` collection 的 `mode/green`、`mode/blue` 选择真实模式。`qifu-shared/theme/*.less` 中的标识符是代码导出映射，不是 Figma 原变量名。
+视觉 Token 的权威数据源为 `../qifu-shared/theme/tokens.json` 与 `../qifu-shared/theme/source/*.json`。先读取 `../qifu-shared/theme/component-token-contract.json`，已存在的组件变量优先绑定；未具备组件变量的插槽只能使用契约指定的 `基础` 语义变量，不得直接使用 `色彩` collection 或 Hex。调用时必须使用记录中的 `figmaPath` / `name`；根据 `基础` collection 的 `毓数/Light`、`智能运营/Light` 与 `色彩` collection 的 `mode/green`、`mode/blue` 选择真实模式。`qifu-shared/theme/*.less` 中的标识符是代码导出映射，不是 Figma 原变量名。
